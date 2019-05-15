@@ -1,0 +1,11 @@
+{% extends "body.html" %}
+
+{% block content %}
+
+    <h1>{{ page.title }}</h1>
+    {% if page.img_src %}
+        <span class="image main"><img src="{{ page.img_src | relative_url }}" alt="" /></span>
+    {% endif %}
+    {{ page.content }}
+
+{% endblock %}

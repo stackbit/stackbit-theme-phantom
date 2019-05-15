@@ -1,0 +1,27 @@
+enabled: true
+title: Follow
+follow_section:
+  - title: Twitter
+    icon: fa-twitter
+    link_url: "#"
+  - title: Facebook
+    icon: fa-facebook
+    link_url: "#"
+  - title: Instagram
+    icon: fa-instagram
+    link_url: "#"
+  - title: Dribbble
+    icon: fa-dribbble
+    link_url: "#"
+  - title: GitHub
+    icon: fa-github
+    link_url: "#"
+  - title: 500px
+    icon: fa-500px
+    link_url: "#"
+  - title: Phone
+    icon: fa-phone
+    link_url: "#"
+  - title: Email
+    icon: fa-envelope-o
+    link_url: "#"

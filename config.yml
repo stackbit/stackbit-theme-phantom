@@ -1,0 +1,7 @@
+baseurl: "/"
+title: "Phantom"
+main_js: "assets/js/main.js"
+params:
+  none: ""
+#templates:
+#  body_class: "is-preload"
