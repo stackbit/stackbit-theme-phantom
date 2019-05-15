@@ -35,5 +35,11 @@ params:
       - title: Email
         icon: fa-envelope-o
         link_url: "#"
+sass:
+  input_file: sass/main.scss
+  output_file: assets/css/main.css
+  indentWidth: 4
+  outputStyle: nested
+  precision: 10
 #templates:
 #  body_class: "is-preload"
