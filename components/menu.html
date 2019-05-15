@@ -1,10 +1,12 @@
 <!-- Menu -->
 <nav id="menu">
-    <h2>Menu</h2>
-    <ul>
-        {% for item in site.menus.main %}
-            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-        {% endfor %}
-    </ul>
+    <div className="inner">
+        <h2>Menu</h2>
+        <ul>
+            {% for item in site.menus.main %}
+                <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <a className="close" href="#menu">Close</a>
 </nav>
-     
