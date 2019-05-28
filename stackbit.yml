@@ -1,5 +1,13 @@
 stackbitVersion: "~0.2.34"
 uploadDir: "images"
+metadata:
+  title: Phantom
+  description: a multipage theme with posts
+  author: Pixelarity
+  authorURL: 'https://pixelarity.com'
+  images:
+    small: images/demo-256x192.png
+    large: images/demo-1024x768.png
 models:
   config:
     type: config
