@@ -12,8 +12,6 @@ models:
   config:
     type: config
     label: Config
-    hideContent: true
-    singleInstance: true
     fields:
       - type: string
         name: none
