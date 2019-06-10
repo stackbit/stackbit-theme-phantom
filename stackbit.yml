@@ -74,6 +74,34 @@ models:
               name: link_url
               label: URL
               widget: url
+  footer:
+    type: data
+    file: footer.yml
+    label: Footer Configuration
+    fields:
+      - type: string
+        name: copyright
+        label: Footer Copyright
+        description: The copyright text displayed at the bottom of the site.
+      - type: list
+        name: links
+        label: Links
+        description: A list of links displayed in the footer.
+        items:
+          type: object
+          labelField: text
+          fields:
+            - type: string
+              name: text
+              label: Link text
+            - type: string
+              name: url
+              label: URL
+              widget: url
+            - type: boolean
+              name: new_window
+              label: Open in new window
+              default: true
   home:
     type: page
     label: Home
