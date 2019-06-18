@@ -1,4 +1,6 @@
-
+@font-face {
+		font-family: "testfont";
+		src: url("../fonts/testfont.ttf");
 
 .test-font{
 	font-family: 'testfont';
