@@ -36,7 +36,6 @@ models:
       - type: boolean
         name: enabled
         label: Enabled
-        default: false
         description: Displays the section in the site footer
       - type: string
         name: title
