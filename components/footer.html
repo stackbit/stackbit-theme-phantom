@@ -1,0 +1,21 @@
+<!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        {% if site.data.contact.enabled %}
+            {% include "contact.html" %}
+        {% endif %}
+        {% if site.data.social.enabled %}
+            {% include "social.html" %}
+        {% endif %}
+        <ul class="copyright">
+            <li>
+                {{ site.data.footer.copyright | safe }}
+                &nbsp;
+                {% for link in site.data.footer.links %}
+                    <a href="{{ link.url }}" {% if link.new_window %}target="_blank" rel="noopener"
+                    {% endif %}>{{ link.text }}</a>.
+                {% endfor %}
+            </li>
+        </ul>
+    </div>
+</footer>

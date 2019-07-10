@@ -1,0 +1,189 @@
+stackbitVersion: ~0.2.34
+uploadDir: images
+metadata:
+  title: Phantom
+  description: a multipage theme with posts
+  author: Pixelarity
+  authorURL: 'https://pixelarity.com'
+  images:
+    small: images/demo-256x192.png
+    large: images/demo-1024x768.png
+models:
+  config:
+    type: config
+    label: Config
+    fields:
+      - type: string
+        name: none
+        label: None
+        default: ''
+        hidden: true
+        description: There are no config params
+  header:
+    type: data
+    file: header.yml
+    label: Header Configuration
+    fields:
+      - type: image
+        name: logo_img_src
+        label: Header Logo
+        description: The logo displayed On the upper left side of the page header
+  contact:
+    type: data
+    file: contact.yml
+    label: Contact Configuration
+    fields:
+      - type: boolean
+        name: enabled
+        label: Enabled
+        default: false
+        description: Displays the section in the site footer
+      - type: string
+        name: title
+        label: Section Title
+  social:
+    type: data
+    file: social.yml
+    label: Social Configuration
+    fields:
+      - type: boolean
+        name: enabled
+        label: Enabled
+        default: false
+      - type: string
+        name: title
+        label: Section Title
+      - type: list
+        name: follow_section
+        label: Social Media Icons
+        description: A list of social media icons
+        items:
+          type: object
+          labelField: title
+          fields:
+            - type: string
+              name: title
+              label: Icon Title
+              required: true
+            - type: string
+              name: icon
+              label: Icon
+              required: true
+              description: Font Awesome Icon
+            - type: string
+              name: link_url
+              label: URL
+              widget: url
+  footer:
+    type: data
+    file: footer.yml
+    label: Footer Configuration
+    fields:
+      - type: string
+        name: copyright
+        label: Footer Copyright
+        description: The copyright text displayed at the bottom of the site.
+      - type: list
+        name: links
+        label: Links
+        description: A list of links displayed in the footer.
+        items:
+          type: object
+          labelField: text
+          fields:
+            - type: string
+              name: text
+              label: Link text
+            - type: string
+              name: url
+              label: URL
+              widget: url
+            - type: boolean
+              name: new_window
+              label: Open in new window
+              default: true
+  home:
+    type: page
+    label: Home
+    singleInstance: true
+    template: home
+    file: index.md
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+      - type: text
+        name: header
+        label: Page Header
+        description: The bold text displayed at the top of the page
+  page:
+    type: page
+    label: Page
+    template: page
+    exclude: posts/**
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+      - type: image
+        name: img_src
+        label: Content Image
+        description: The Image displayed in the content section of the page
+  post:
+    type: page
+    label: Post
+    template: page
+    folder: posts
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+      - type: enum
+        name: home_style
+        label: Home Thumbnail Style
+        options:
+          - style1
+          - style2
+          - style3
+          - style4
+          - style5
+          - style6
+          - style7
+        required: true
+        description: The style used for the home thumbnail
+      - type: image
+        name: home_img
+        label: Home Thumbnail Image
+        description: The Image displayed in the home thumbnail on hover
+      - type: markdown
+        name: excerpt
+        label: Excerpt
+        description: The text displayed in the home thumbnail on hover
+      - type: date
+        name: date
+        label: Post Date
+        required: true
+      - type: image
+        name: img_src
+        label: Content Image
+        description: The Image displayed in the content section of the page
+  elements:
+    type: page
+    label: Elements
+    hideContent: true
+    singleInstance: true
+    template: elements
+    file: elements.md
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+stackbit_banner:
+  show_banner: true
+  name: Phantom
+  create_url: 'https://app.stackbit.com/wizard?theme=phantom'
+  github_url: 'https://github.com/stackbithq/stackbit-theme-phantom'

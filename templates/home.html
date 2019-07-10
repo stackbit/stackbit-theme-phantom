@@ -1,0 +1,25 @@
+{% extends "body.html" %}
+
+{% block content %}
+
+    <header>
+        <h1>{{ page.params.header | nl2br | safe }}</h1>
+        {{ page.content }}
+    </header>
+    <section class="tiles">
+        {% for post in getPages("/posts") | sort(true, true, "date") %}
+            <article class="{{ post.home_style }}">
+                <span class="image">
+                    <img src="{{ post.home_img | relative_url }}" alt="" />
+                </span>
+                <a href="{{ post.url | relative_url }}">
+                    <h2>{{ post.title }}</h2>
+                    <div class="content">
+                        {{ post.excerpt | markdownify }}
+                    </div>
+                </a>
+            </article>
+        {% endfor %}
+    </section>
+
+{% endblock %}

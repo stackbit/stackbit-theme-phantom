@@ -1,0 +1,8 @@
+<section>
+    <h2>{{ site.data.social.title }}</h2>
+    <ul class="icons">
+        {% for link in site.data.social.follow_section %}
+            <li><a href="{{ link.link_url }}" class="icon style2 {{ link.icon }}"><span class="label">{{ link.title }}</span></a></li>
+        {% endfor %}
+    </ul>
+</section>
