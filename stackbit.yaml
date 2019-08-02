@@ -185,5 +185,7 @@ models:
 stackbit_banner:
   show_banner: true
   name: Phantom
-  create_url: 'https://app.stackbit.com/wizard?theme=phantom'
+  create_url: 'https://app.stackbit.com/create?theme=phantom'
   github_url: 'https://github.com/stackbithq/stackbit-theme-phantom'
+pagesDir: content
+staticDir: static
