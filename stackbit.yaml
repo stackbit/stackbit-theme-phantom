@@ -1,5 +1,12 @@
-stackbitVersion: ~0.2.34
+stackbitVersion: ~0.2.0
+ssgName: unibit
+buildCommand: unibit build
+publishDir: output
+staticDir: static
 uploadDir: images
+dataDir: data
+pagesDir: content
+pageLayoutKey: layout
 metadata:
   title: Phantom
   description: a multipage theme with posts
@@ -187,5 +194,3 @@ stackbit_banner:
   name: Phantom
   create_url: 'https://app.stackbit.com/create?theme=phantom'
   github_url: 'https://github.com/stackbithq/stackbit-theme-phantom'
-pagesDir: content
-staticDir: static
