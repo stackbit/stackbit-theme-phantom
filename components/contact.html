@@ -1,6 +1,9 @@
 <section>
     <h2>{{ site.data.contact.title }}</h2>
-    <form method="post" action="#">
+    <form name="contactForm" method="post" action="#" netlify-honeypot="bot-field" data-netlify="true">
+        <div class="screen-reader-text">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </div>
         <div class="fields">
             <div class="field half">
                 <input type="text" name="name" id="name" placeholder="Name" />
@@ -12,6 +15,7 @@
                 <textarea name="message" id="message" placeholder="Message"></textarea>
             </div>
         </div>
+        <input type="hidden" name="form-name" value="contactForm" />
         <ul class="actions">
             <li><input type="submit" value="Send" class="primary" /></li>
         </ul>
